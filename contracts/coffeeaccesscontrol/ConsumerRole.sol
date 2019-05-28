@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity >0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -7,17 +7,23 @@ import "./Roles.sol";
 contract ConsumerRole {
 
   // Define 2 events, one for Adding, and other for Removing
-
+  event add(address account);
+  event remove(address account);
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
+  struct consumers  {
+    address account;
+    mapping (address => Roles) role;
+  }
 
+  mapping (uint => consumers) consumer;
   // In the constructor make the address that deploys this contract the 1st consumer
   constructor() public {
-    
+    consumer[0] = consumers(msg.sender);
   }
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyConsumer() {
-    
+  //  require(consumers(msg.sender) == consumers.role[msg.sender], "You have an inappropriate role.");
     _;
   }
 
