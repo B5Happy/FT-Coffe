@@ -8,8 +8,8 @@ contract ConsumerRole {
 
   using Roles for Roles.Role;
   // Define 2 events, one for Adding, and other for Removing
-  event ConsumerAdd(address account);
-  event ConsumerRemove(address account);
+  event ConsumerAdd(address indexed account);
+  event ConsumerRemove(address indexed account);
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
   Roles.Role private consumers;
 
