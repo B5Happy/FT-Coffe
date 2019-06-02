@@ -1,6 +1,6 @@
 # FT-Coffee
 
-FT-Coffee is a supply chain DApp, that manage user permissions and track a product’s authenticity.
+FT-Coffee is a supply chain DApp, that demonstrates a Coffee Supply Chain flow between a farmer to consumer. A farmer can add items to the inventory system stored in the blockchain for each step like harvest, pack... A distributor can buy those item to the farmer.Then a retailer can receive it. After that a consumer can purchase such items from the retailer. Additionally anyone can track the recorde of the item.
 
 ## Preparation 
 
